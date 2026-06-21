@@ -1,0 +1,18 @@
+@page
+@model MyWebApp.Pages.ContactsModel
+
+<h2>Contacts List</h2>
+
+@if (Model.Contacts.Count == 0)
+{
+    <p>No contacts yet</p>
+}
+else
+{
+    <ul>
+        @foreach (var c in Model.Contacts)
+        {
+            <li>@c.Name - @c.Email</li>
+        }
+    </ul>
+}
